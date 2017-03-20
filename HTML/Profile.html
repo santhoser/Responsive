@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Browser</title>
+    <link href="Data/Style/style.css" rel="stylesheet" />
+    <script src="Data/scripts/jquery-1.10.1.min.js"></script>
+    <script src="Data/scripts/script.js"></script>
+    <script src="Data/scripts/data.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div class="mainContent">
+        <br />
+        <br />
+        <div class="headDiv">Profile Browser</div>
+        <br />
+        <br />
+        <div id="verticalTab">
+            <ul id="ulMenu" class="resp-tabs-list">
+            </ul>
+            <div id="divProfileInfo" class="resp-tabs-container">
+            </div>
+        </div>
+    </div>
+    <br />
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#verticalTab').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true
+        });
+    });
+    // load JSON object, and set the values
+    var BuildProfileFromJSON = function () {
+        for (var profile in data) {
+            if (data.hasOwnProperty(profile)) {
+                var name = (data[profile].firstName + " " + data[profile].lastName);
+                var image = 'Data/' + data[profile].picture;
+                var info = data[profile].bio;
+                var divString = '<div><img alt="Profile Image" src="' + image + '" width="100" class="profileImage" align="left"></img>' + info + '</div>';
+                $("#verticalTab ul").append('<li>' + name + '</li>');
+                $("#divProfileInfo").append(divString);
+            }
+        }
+    };
+    BuildProfileFromJSON();
+</script>
+</html>

@@ -1,0 +1,233 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+    background: #ffffff;
+    font-family:'Segoe UI';
+}
+
+.mainContent {
+    width:100%;
+    max-width:800px;
+    margin: 0 auto;
+}
+
+.headDiv {
+    width:100%;
+font-size:larger;
+font-weight:bold;
+text-align:center;
+}
+
+ul.resp-tabs-list, p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.resp-tabs-list ul {
+  
+    width:40%;
+}
+
+.resp-tabs-list li {
+  font-weight: bold;
+    font-size: 11px;
+    display: inline-block;
+    margin: 0;
+    list-style: none;
+    cursor: pointer;
+    float: left;
+    text-align:left;
+    background-color:#c1c1c1;
+    border: 1px solid #9B9797;
+}
+
+.resp-tabs-container {
+    padding: 0px;
+    background-color: #fff;
+    clear: left;
+    text-align:left;
+    font-family:'Segoe UI';
+    font-size:14px;
+
+}
+.profileImage {
+
+padding-bottom:2px;
+    padding-right:4px;
+}
+
+h2.resp-accordion {
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+    background-color:#c1c1c1;
+}
+
+.resp-tab-content {
+    display: none;
+    padding: 15px;
+}
+
+.resp-tab-active {
+    border: 1px solid #9B9797;
+    border-bottom: none;
+    margin-bottom: -1px !important;
+    padding: 12px 14px 14px 14px !important;
+    background-color:#ffffff;
+}
+
+.resp-tab-active {
+    border-bottom: none;
+    background-color: #fff;
+}
+
+.resp-content-active, .resp-accordion-active {
+    display: block;
+}
+
+.resp-tab-content {
+    border: 1px solid #9B9797;
+}
+
+h2.resp-accordion {
+    font-size: 13px;
+    border: 1px solid #9B9797;
+    border-top: 0px solid #9B9797;
+    margin: 0px;
+    padding: 5px 5px;
+}
+
+h2.resp-tab-active {
+    border-bottom: 0px solid #c1c1c1 !important;
+    margin-bottom: 0px !important;
+    padding: 5px 5px !important;
+}
+
+h2.resp-tab-title:last-child {
+    border-bottom: 12px solid #c1c1c1 !important;
+    background: blue;
+}
+/*-----------Vertical tabs-----------*/
+.resp-vtabs ul.resp-tabs-list {
+    float: left;
+    width: 30%;
+    border-radius:10px;
+}
+
+.resp-vtabs .resp-tabs-list li {
+    display: block;
+    padding: 5px 5px !important;
+    margin: 0;
+    cursor: pointer;
+    float: none;
+}
+
+.resp-vtabs .resp-tabs-list li:last-child {
+ border-bottom-left-radius:8px;
+ border-bottom-right-radius:8px;
+}
+
+.resp-vtabs .resp-tabs-list li:first-child {
+ border-top-left-radius:8px;
+ border-top-right-radius:8px;
+}
+
+.resp-vtabs .resp-tabs-container {
+    padding: 0px;
+    background-color: #fff;
+    border-left : 1px solid #c1c1c1;
+    float: left;
+    width: 68%;
+    min-height: 250px;
+    border-radius: 4px;
+    clear: none;
+}
+
+.resp-vtabs .resp-tab-content {
+    border: none;
+}
+
+.resp-vtabs li.resp-tab-active {
+    border: 1px solid #c1c1c1;
+    border-right: none;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    margin-right: -1px !important;
+    padding: 5px 5px 5px 5px !important;
+}
+
+.resp-arrow {
+    width: 0;
+    height: 0;
+    float: right;
+    margin-top: 3px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid #9B9797;
+}
+
+h2.resp-tab-active span.resp-arrow {
+    border: none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #9B9797;
+}
+
+/*-----------Accordion styles-----------*/
+h2.resp-tab-active {
+    background: #ffffff !important;
+    border-left:none;
+    border-right:none;
+}
+.resp-easy-accordion  h2.resp-accordion {
+        display: block;
+}
+.resp-easy-accordion .resp-tab-content {
+    border: 1px solid #9B9797;
+}
+
+.resp-easy-accordion .resp-tab-content:last-child {
+    border-bottom: 1px solid #9B9797 !important;
+}
+
+.resp-jfit {
+    width: 100%;
+    margin: 0px;
+}
+
+.resp-tab-content-active {
+    display: block;
+}
+
+h2.resp-accordion:first-child {
+    border-top: 1px solid #9B9797 !important;
+}
+
+@media only screen and (max-width: 600px) {
+    ul.resp-tabs-list {
+        display: none;
+    }
+
+    h2.resp-accordion {
+        display: block;
+    }
+
+    .resp-vtabs .resp-tab-content {
+        border: 1px solid #ffffff;
+    }
+
+    .resp-vtabs .resp-tabs-container {
+        border: none;
+        float: none;
+        width: 100%;
+        min-height: initial;
+        clear: none;
+    }
+    .resp-accordion-closed {
+        display:none !important;
+    }
+    .resp-vtabs .resp-tab-content:last-child {
+        border-bottom: 1px solid #9B9797 !important;
+    }
+}
